@@ -4,6 +4,7 @@ Testing re-renders.
 
 ```bash
 npm install
+npm test
 npm run dev
 ```
 
