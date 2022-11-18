@@ -6,14 +6,7 @@ import App from "./App";
 import { renderCount } from "./trackRender";
 import Counter from "./Counter";
 
-vi.mock("./trackRender", () => {
-  const renderCounts: { [component: string]: number } = {};
-  return {
-    trackRender: (component: string) =>
-      (renderCounts[component] = (renderCounts[component] || 0) + 1),
-    renderCount: (component: string) => renderCounts[component],
-  };
-});
+vi.mock("./trackRender");
 
 it("should count when clicked", async () => {
   render(<App />);
